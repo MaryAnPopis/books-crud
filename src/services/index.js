@@ -21,9 +21,9 @@ export const get = customer => {
 
 export const getById = (customer, id) => {
   return fetch(`${API_URL}/${id}`, {
-    // headers: {
-    //   customer: customer,
-    // },
+    headers: {
+      customer: customer,
+    },
   })
     .then(res => {
       return res.json()
